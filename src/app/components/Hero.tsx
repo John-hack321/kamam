@@ -8,22 +8,24 @@ export default function Hero() {
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden bg-gradient-to-br from-red-400 to-red-500">
       {/* Floating hearts background */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute text-red-200 text-2xl"
+            className="absolute text-red-200 text-3xl"
             initial={{
               x: Math.random() * 100 + 'vw',
               y: '100vh',
-              opacity: 0.6,
+              opacity: 0.8,
+              scale: 0.5,
             }}
             animate={{
-              y: '-100px',
-              opacity: 0,
+              y: '-100vh',
+              opacity: [0.8, 0.5, 0],
+              scale: [0.5, 1, 1.5],
               rotate: Math.random() * 360,
             }}
             transition={{
-              duration: Math.random() * 5 + 5,
+              duration: Math.random() * 10 + 10,
               repeat: Infinity,
               ease: 'linear',
               delay: Math.random() * 5,
