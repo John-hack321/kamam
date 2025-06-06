@@ -81,8 +81,7 @@ export default function FinalSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-20 pt-10 border-t border-red-100"
         >
-          <p className="text-gray-600 mb-6 text-lg font-medium"></p>
-          <div className="flex justify-center space-x-3 text-3xl mb-8">
+          <div className="flex justify-center space-x-4 text-4xl mb-12">
             <motion.span 
               className="text-red-400 hover:text-red-500 cursor-pointer"
               whileHover={{ scale: 1.3, y: -5 }}
@@ -99,12 +98,9 @@ export default function FinalSection() {
               transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.2 }}
             >❤️</motion.span>
           </div>
-          <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30 shadow-sm">
-            <p className="text-gray-600 italic mt-10 text-lg">
-             Bytheway i havent written this to push you into comming back with me but to show 
-             you that I still care about us , and that you still ocupy my mind , and I would 
-             encourage you to take as mucha as time as you want ot think about it . Anyways I 
-             will be waiting , whatever you decide it will be okay .
+          <div className="max-w-xl mx-auto bg-white/50 backdrop-blur-sm p-8 rounded-xl border border-white/30 shadow-sm mt-12">
+            <p className="text-gray-600 italic text-lg">
+             I just wanted to show you that I still care about us, and you're always on my mind.
             </p>
           </div>
         </motion.div>

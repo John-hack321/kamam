@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -42,7 +43,7 @@ export default function Hero() {
         >
           <div className="w-64 h-80 md:w-80 md:h-96 mb-20 ml-60 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30 relative">
             <div className="absolute inset-0 bg-red-300 flex items-center justify-center text-white text-lg">
-              <img src="/joy" alt="" />
+              <Image src="/joy" alt="Joy" width={200} height={200} className="object-cover" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">I'm Sorry Kamama</h1>
