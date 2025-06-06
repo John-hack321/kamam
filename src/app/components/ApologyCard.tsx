@@ -213,7 +213,7 @@ export default function ApologyCard() {
   }, [mounted]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center p-4 md:p-8 overflow-hidden bg-gradient-to-br from-red-400 to-red-500">
+    <section className="relative min-h-[150vh] flex items-start justify-center py-20 p-4 md:p-12 overflow-hidden bg-gradient-to-br from-red-400 to-red-500">
       {/* Background images - these will float up from the bottom */}
       <div className="absolute inset-0 overflow-visible pointer-events-none" style={{ zIndex: 0 }}>
         {mounted && imageElements}
@@ -221,15 +221,15 @@ export default function ApologyCard() {
 
       {/* Main Apology Card */}
       <motion.div 
-        className="relative z-10 w-full max-w-3xl bg-white/30 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border-2 border-white/20"
+        className="relative z-10 w-full max-w-4xl bg-white/30 backdrop-blur-lg rounded-2xl shadow-2xl overflow-visible border-2 border-white/20"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="p-6 md:p-12 max-h-[70vh] overflow-y-auto custom-scrollbar">
+        <div className="p-8 md:p-12 space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-8 text-center font-serif">I Miss You Kamama</h2>
-          <div className="space-y-6 text-gray-800 text-lg md:text-xl leading-relaxed font-medium">
+          <div className="space-y-8 text-gray-800 text-xl md:text-2xl leading-relaxed font-medium">
             <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">I miss my baby, kamama, I&apos;m sorry for being selfish, it was not okay for me to just do what I did without considering how you would feel about it, that was selfish.</p>
             
             <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Na pia I totally respect your decision, whatever you decide to do I will be okay with it, but pia usiache everything that we have worked for to go in vain.</p>
@@ -247,7 +247,7 @@ export default function ApologyCard() {
             <p className="text-right mt-8 text-2xl font-bold text-red-600">Bye. Take care.</p>
           </div>
           
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-16 mb-8">
             <motion.div
               className="w-16 h-16 bg-red-500/90 rounded-full flex items-center justify-center text-white shadow-lg"
               animate={{ 

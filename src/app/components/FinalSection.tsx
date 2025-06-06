@@ -28,7 +28,10 @@ export default function FinalSection() {
   };
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-white to-red-50 text-center overflow-hidden">
+    <section className="relative py-32 px-4 bg-gradient-to-b from-white to-red-50 text-center overflow-hidden min-h-screen flex items-center">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+      </div>
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -36,13 +39,28 @@ export default function FinalSection() {
         <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
       
-      <div className="relative z-10 container mx-auto max-w-4xl">
+      <div className="relative z-10 container mx-auto max-w-5xl px-6">
+        <div className="mb-24">
+          <motion.div 
+            className="w-24 h-24 mx-auto mb-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center text-white text-4xl"
+            animate={{ 
+              rotate: 360,
+              scale: [1, 1.1, 1]
+            }}
+            transition={{ 
+              rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+              scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+            }}
+          >
+            ❤️
+          </motion.div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20"
+          className="mb-24 bg-white/80 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-white/20"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-6 font-serif">
             I Love You More Than Words Can Say
@@ -80,31 +98,42 @@ export default function FinalSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-20 pt-10 border-t border-red-100"
+          className="mt-32 pt-16 border-t-2 border-red-100/50"
         >
-          <p className="text-gray-600 mb-6 text-lg font-medium">Made with all my love for Kamama</p>
-          <div className="flex justify-center space-x-3 text-3xl mb-8">
-            <motion.span 
-              className="text-red-400 hover:text-red-500 cursor-pointer"
-              whileHover={{ scale: 1.3, y: -5 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-            >❤️</motion.span>
-            <motion.span 
-              className="text-pink-400 hover:text-pink-500 cursor-pointer"
-              whileHover={{ scale: 1.3, y: -5 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.1 }}
-            >💕</motion.span>
-            <motion.span 
-              className="text-red-400 hover:text-red-500 cursor-pointer"
-              whileHover={{ scale: 1.3, y: -5 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.2 }}
-            >❤️</motion.span>
-          </div>
-          <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30 shadow-sm">
-            <p className="text-gray-600 italic text-lg">
-              &quot;Love is not about how many days, months, or years you have been together.
-              It&apos;s about how much you love each other every single day.&quot;
-            </p>
+          <div className="max-w-3xl mx-auto space-y-12">
+            <div className="space-y-8">
+              <p className="text-gray-600 text-2xl font-medium">Made with all my love for Kamama</p>
+              <div className="flex justify-center space-x-6 text-4xl">
+                <motion.span 
+                  className="text-red-400 hover:text-red-500 cursor-pointer"
+                  whileHover={{ scale: 1.4, y: -5 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                >❤️</motion.span>
+                <motion.span 
+                  className="text-pink-400 hover:text-pink-500 cursor-pointer"
+                  whileHover={{ scale: 1.4, y: -5 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.1 }}
+                >💕</motion.span>
+                <motion.span 
+                  className="text-red-400 hover:text-red-500 cursor-pointer"
+                  whileHover={{ scale: 1.4, y: -5 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.2 }}
+                >❤️</motion.span>
+              </div>
+            </div>
+            
+            <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-white/40 shadow-lg">
+              <p className="text-gray-700 italic text-xl leading-relaxed">
+                &quot;Love is not about how many days, months, or years you have been together.
+                It&apos;s about how much you love each other every single day.&quot;
+              </p>
+            </div>
+            
+            <div className="pt-8">
+              <p className="text-gray-500 text-sm">
+                © {new Date().getFullYear()} With all my heart
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
