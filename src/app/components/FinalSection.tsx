@@ -55,7 +55,7 @@ export default function FinalSection() {
               I Miss You
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Every moment without you feels incomplete. You're always in my thoughts.
+              Every moment without you feels incomplete. You&apos;re always in my thoughts.
             </p>
           </div>
           

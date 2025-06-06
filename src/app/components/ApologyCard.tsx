@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useMemo, useEffect, useState } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 
 interface MessageImage {
   id: number;
@@ -179,18 +180,18 @@ const FloatingImage = ({ img }: { img: MessageImage }) => {
       }}
     >
       <div className="w-full h-full relative group">
-        <img
-          src={img.src}
+        <Image
+          src={img.src.startsWith('/') ? img.src : `/${img.src}`}
           alt={`Memory ${img.id}`}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 shadow-lg rounded-lg"
-          loading="lazy"
+          fill
+          className="object-contain transition-transform duration-500 group-hover:scale-110 shadow-lg rounded-lg"
           style={{
-            maxWidth: '100%',
-            height: 'auto',
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             backdropFilter: 'blur(5px)',
             border: '2px solid rgba(255, 255, 255, 0.2)'
           }}
+          sizes="(max-width: 768px) 100vw, 300px"
+          priority={false}
         />
       </div>
     </motion.div>
