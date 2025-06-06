@@ -128,8 +128,8 @@ const FloatingImage = ({ img }: { img: MessageImage }) => {
   const width = Math.min(maxWidth, dimensions.width);
   const height = width / dimensions.aspectRatio;
 
-  const duration = 20 + Math.random() * 20; // 20-40 seconds for slower movement
-  const delay = Math.random() * 5; // 0-5 seconds
+  const duration = 10 + Math.random() * 15; // 10-25 seconds for faster movement
+  const delay = Math.random() * 2; // 0-2 seconds for more frequent appearance
   
   // Calculate start and end positions
   const startY = typeof window !== 'undefined' ? window.innerHeight + 50 : 0;
@@ -205,18 +205,30 @@ export default function ApologyCard() {
     setMounted(true);
   }, []);
 
+    // Create multiple instances of each image to have more on screen at once
   const imageElements = useMemo(() => {
     if (!mounted) return [];
     
-    return messageImages.map((img) => (
-      <FloatingImage key={img.id} img={img} />
-    ));
+    const elements = [];
+    // Create 3 instances of each image for more on screen at once
+    for (let i = 0; i < 3; i++) {
+      elements.push(...messageImages.map((img) => (
+        <FloatingImage 
+          key={`${img.id}-${i}`} 
+          img={{
+            ...img,
+            id: parseInt(`${img.id}${i}`) // Ensure unique keys
+          }} 
+        />
+      )));
+    }
+    return elements;
   }, [mounted]);
 
   return (
-    <section className="relative min-h-[150vh] flex items-start justify-center py-20 p-4 md:p-12 overflow-hidden bg-gradient-to-br from-red-400 to-red-500">
+    <section className="relative min-h-[150vh] flex items-start justify-center py-20 p-4 md:p-12 overflow-visible bg-gradient-to-br from-red-400 to-red-500">
       {/* Background images - these will float up from the bottom */}
-      <div className="absolute inset-0 overflow-visible pointer-events-none" style={{ zIndex: 0 }}>
+      <div className="fixed top-0 left-0 w-full h-full overflow-visible pointer-events-none" style={{ zIndex: 0 }}>
         {mounted && imageElements}
       </div>
 

@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden bg-gradient-to-br from-red-400 to-red-500">
+    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden bg-gradient-to-br from-red-400 to-red-500 -mt-20 pt-20">
       {/* Floating hearts background */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
