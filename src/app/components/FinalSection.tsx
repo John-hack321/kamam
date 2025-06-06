@@ -102,8 +102,8 @@ export default function FinalSection() {
           </div>
           <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30 shadow-sm">
             <p className="text-gray-600 italic text-lg">
-              "Love is not about how many days, months, or years you have been together.
-              It's about how much you love each other every single day."
+              &quot;Love is not about how many days, months, or years you have been together.
+              It&apos;s about how much you love each other every single day.&quot;
             </p>
           </div>
         </motion.div>

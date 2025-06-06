@@ -230,19 +230,19 @@ export default function ApologyCard() {
         <div className="p-6 md:p-12 max-h-[70vh] overflow-y-auto custom-scrollbar">
           <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-8 text-center font-serif">I Miss You Kamama</h2>
           <div className="space-y-6 text-gray-800 text-lg md:text-xl leading-relaxed font-medium">
-            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">I miss my baby, kamama, I'm sorry for being selfish, it was not okay for me to just do what I did without considering how you would feel about it, that was selfish.</p>
+            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">I miss my baby, kamama, I&apos;m sorry for being selfish, it was not okay for me to just do what I did without considering how you would feel about it, that was selfish.</p>
             
             <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Na pia I totally respect your decision, whatever you decide to do I will be okay with it, but pia usiache everything that we have worked for to go in vain.</p>
             
-            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">I know I'm difficult to deal with and I have a lot of personality and also a weirdo but can you please give this a second chance. Give us a second chance, let's start from the top again, and I know nothing is ever the same twice, even finding someone in the same person twice is also not possible at times but can we give this try again.</p>
+            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">I know I&apos;m difficult to deal with and I have a lot of personality and also a weirdo but can you please give this a second chance. Give us a second chance, let&apos;s start from the top again, and I know nothing is ever the same twice, even finding someone in the same person twice is also not possible at times but can we give this try again.</p>
             
             <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Nimemiss kuitwas kababa, so do something about it, but its up to you. You can take as long as you want atat kama ni whole year, I will be here waiting for you, but again its up to you, ka unaona we go back to being strangers na kupitana like never knew each other pia ni sawa.</p>
             
-            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Though sincerely I don't know why I ran into that decision in the first place, I guess again it was my sub-conscious doing its thing once more, but we whatever utaamua kamama I will be okay with it.</p>
+            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Though sincerely I don&apos;t know why I ran into that decision in the first place, I guess again it was my sub-conscious doing its thing once more, but we whatever utaamua kamama I will be okay with it.</p>
             
-            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Na najua hapa pia there might be typos because I've tried to build this website as fast as possible but at least imekuikia, that's what matters.</p>
+            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Na najua hapa pia there might be typos because I&apos;ve tried to build this website as fast as possible but at least imekuikia, that&apos;s what matters.</p>
             
-            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Me I still love you, and I'm here waiting for you, you take all the time you need.</p>
+            <p className="bg-white/30 p-4 rounded-lg backdrop-blur-sm">Me I still love you, and I&apos;m here waiting for you, you take all the time you need.</p>
             
             <p className="text-right mt-8 text-2xl font-bold text-red-600">Bye. Take care.</p>
           </div>

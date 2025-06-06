@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState, useMemo } from 'react';
+import Image from 'next/image';
 
 const messageImages = [
   { id: 1, src: "/Pasted image (2).png" },
@@ -110,19 +111,20 @@ const FloatingMessage = ({ img }: { img: { id: number; src: string } }) => {
       }}
     >
       <div className="w-full h-full relative group">
-        <img
-          src={img.src}
-          alt={`Memory ${img.id}`}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 shadow-lg rounded-lg"
-          loading="lazy"
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            backdropFilter: 'blur(5px)',
-            border: '2px solid rgba(255, 255, 255, 0.2)'
-          }}
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src={img.src}
+            alt={`Memory ${img.id}`}
+            width={300}
+            height={300}
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 shadow-lg rounded-lg"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(5px)',
+              border: '2px solid rgba(255, 255, 255, 0.2)'
+            }}
+          />
+        </div>
       </div>
     </motion.div>
   );
@@ -186,17 +188,20 @@ export default function Hero() {
             whileHover={{ scale: 1.02, rotate: 0 }}
           >
             <div className="absolute inset-0 overflow-hidden">
-              <img 
+              <Image 
                 src="/joy.png" 
                 alt="Special Memory" 
+                width={500}
+                height={500}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
             {/* Decorative elements */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div className="absolute inset-0 border-8 border-white/20 rounded-xl pointer-events-none"></div>
           </motion.div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mt-10 mb-4">I'm Sorry Kamama</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mt-10 mb-4">I&apos;m Sorry Kamama</h1>
           <p className="text-xl md:text-2xl text-white/90">I still need you a lot</p>
         </motion.div>
       </div>
