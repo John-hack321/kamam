@@ -28,49 +28,49 @@ export default function FinalSection() {
   };
 
   return (
-    <section className="relative py-20 px-4 bg-white text-center overflow-hidden">
-      <div className="relative z-10 container mx-auto max-w-4xl px-6">
+    <section className="relative py-20 px-4 bg-gradient-to-b from-white to-red-50 text-center overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+      
+      <div className="relative z-10 container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="py-16"
+          className="mb-16 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20"
         >
-          <div className="mb-12">
-            <motion.div 
-              className="w-20 h-20 mx-auto mb-8 rounded-full flex items-center justify-center text-4xl text-red-500"
-              animate={{ 
-                scale: [1, 1.1, 1],
-                rotate: [0, 10, -10, 0]
-              }}
-              transition={{ 
-                scale: { duration: 2, repeat: Infinity },
-                rotate: { duration: 4, repeat: Infinity }
-              }}
-            >
-              ❤️
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              I Miss You
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Every moment without you feels incomplete. You&apos;re always in my thoughts.
-            </p>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-6 font-serif">
+            I Love You More Than Words Can Say
+          </h2>
+          <p className="text-gray-700 mb-10 text-xl leading-relaxed max-w-2xl mx-auto">
+            Kamama ❤️, I know I messed up and I can't express how sorry I am.
+          </p>
           
           <motion.button
             onClick={handleForgiveClick}
-            className="relative overflow-hidden bg-red-500 text-white font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-lg group"
-            whileHover={{ scale: 1.03 }}
+            className="relative overflow-hidden bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold py-5 px-10 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-xl group"
+            whileHover={{ 
+              background: ['linear-gradient(to right, #ef4444, #ec4899, #ef4444)']
+            }}
             whileTap={{ scale: 0.98 }}
           >
             <span className="relative z-10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
-              I Miss You
+              PLEASE FORGIVE ME
             </span>
+            <motion.span 
+              className="absolute inset-0 bg-white/20"
+              initial={{ width: 0, opacity: 0 }}
+              whileHover={{ width: '100%', opacity: 1 }}
+              transition={{ duration: 0.4 }}
+            />
           </motion.button>
         </motion.div>
         
@@ -79,20 +79,31 @@ export default function FinalSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="pt-12 mt-16 border-t border-gray-100"
+          className="mt-20 pt-10 border-t border-red-100"
         >
-          <div className="max-w-2xl mx-auto space-y-6">
-            <div className="flex justify-center space-x-4 text-2xl">
-              <span className="text-red-400">❤️</span>
-              <span className="text-pink-400">💕</span>
-              <span className="text-red-400">❤️</span>
-            </div>
-            
-            <div className="pt-4">
-              <p className="text-gray-400 text-sm">
-                © {new Date().getFullYear()} Made with love
-              </p>
-            </div>
+          <p className="text-gray-600 mb-6 text-lg font-medium">Made with all my love for Kamama</p>
+          <div className="flex justify-center space-x-3 text-3xl mb-8">
+            <motion.span 
+              className="text-red-400 hover:text-red-500 cursor-pointer"
+              whileHover={{ scale: 1.3, y: -5 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >❤️</motion.span>
+            <motion.span 
+              className="text-pink-400 hover:text-pink-500 cursor-pointer"
+              whileHover={{ scale: 1.3, y: -5 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.1 }}
+            >💕</motion.span>
+            <motion.span 
+              className="text-red-400 hover:text-red-500 cursor-pointer"
+              whileHover={{ scale: 1.3, y: -5 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10, delay: 0.2 }}
+            >❤️</motion.span>
+          </div>
+          <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30 shadow-sm">
+            <p className="text-gray-600 italic text-lg">
+              "Love is not about how many days, months, or years you have been together.
+              It's about how much you love each other every single day."
+            </p>
           </div>
         </motion.div>
       </div>

@@ -244,7 +244,7 @@ export default function ApologyCard() {
             </div>
             
             <div className="space-y-8">
-              <p className="bg-white/30 p-6 rounded-lg backdrop-blur-sm shadow-sm">Nimemiss kuitwas kababa, so do something about it, but its up to you. You can take as long as you want atat kama ni whole year, I will be here waiting for you, but again its up to you, ka unaona we go back to being strangers na kupitana like never knew each other pia ni sawa.</p>
+              <p className="bg-white/30 p-6 rounded-lg backdrop-blur-sm shadow-sm">Nimemiss kuitwa kababa, so do something about it, but its up to you. You can take as long as you want ata kama ni a whole year, I will be here waiting for you, but again its up to you, ka unaona we go back to being strangers na kupitana like we never knew each other pia ni sawa.</p>
             </div>
             
             <div className="space-y-8">
@@ -252,7 +252,7 @@ export default function ApologyCard() {
             </div>
             
             <div className="space-y-8">
-              <p className="bg-white/30 p-6 rounded-lg backdrop-blur-sm shadow-sm">Na najua hapa pia there might be typos because I&apos;ve tried to build this website as fast as possible but at least imekuikia, that&apos;s what matters.</p>
+              <p className="bg-white/30 p-6 rounded-lg backdrop-blur-sm shadow-sm">Na najua hapa pia there might be typos kwa hii webiste because I&apos;ve tried to build this website as fast as possible but at least imekufikia , that&apos;s what matters.</p>
             </div>
             
             <div className="space-y-8">
