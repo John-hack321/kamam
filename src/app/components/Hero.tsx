@@ -46,7 +46,7 @@ export default function Hero() {
               <Image src="/joy" alt="Joy" width={200} height={200} className="object-cover" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">I'm Sorry Kamama</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">I&apos;m Sorry Kamama</h1>
           <p className="text-xl md:text-2xl text-white/90">I still need you a lot</p>
         </motion.div>
       </div>

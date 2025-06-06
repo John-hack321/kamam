@@ -48,7 +48,7 @@ export default function FinalSection() {
             I Love You More Than Words Can Say
           </h2>
           <p className="text-gray-700 mb-20 text-xl leading-relaxed max-w-2xl mx-auto">
-            Kamama ❤️, I know I messed up and I can't express how sorry I am.
+            Kamama ❤️, I know I messed up and I can&apos;t express how sorry I am.
           </p>
           
           <motion.button
@@ -100,7 +100,7 @@ export default function FinalSection() {
           </div>
           <div className="max-w-xl mx-auto bg-white/50 backdrop-blur-sm p-8 rounded-xl border border-white/30 shadow-sm mt-12">
             <p className="text-gray-600 italic text-lg">
-             I just wanted to show you that I still care about us, and you're always on my mind.
+             I just wanted to show you that I still care about us, and you&apos;re always on my mind.
             </p>
           </div>
         </motion.div>
