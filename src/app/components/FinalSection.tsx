@@ -47,13 +47,13 @@ export default function FinalSection() {
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-6 font-serif">
             I Love You More Than Words Can Say
           </h2>
-          <p className="text-gray-700 mb-10 text-xl leading-relaxed max-w-2xl mx-auto">
-            Kamama ❤️, I know I messed up and I can&apos;t express how sorry I am.
+          <p className="text-gray-700 mb-20 text-xl leading-relaxed max-w-2xl mx-auto">
+            Kamama ❤️, I know I messed up and I can't express how sorry I am.
           </p>
           
           <motion.button
             onClick={handleForgiveClick}
-            className="relative overflow-hidden bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold py-5 px-10 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-xl group"
+            className="relative overflow-hidden bg-gradient-to-r mt-20 from-red-500 to-pink-500 text-white font-bold py-5 px-10 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-xl group"
             whileHover={{ 
               background: ['linear-gradient(to right, #ef4444, #ec4899, #ef4444)']
             }}
@@ -63,7 +63,7 @@ export default function FinalSection() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
-              PLEASE FORGIVE ME
+              I MISS YOU
             </span>
             <motion.span 
               className="absolute inset-0 bg-white/20"
@@ -81,7 +81,7 @@ export default function FinalSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-20 pt-10 border-t border-red-100"
         >
-          <p className="text-gray-600 mb-6 text-lg font-medium">Made with all my love for Kamama</p>
+          <p className="text-gray-600 mb-6 text-lg font-medium"></p>
           <div className="flex justify-center space-x-3 text-3xl mb-8">
             <motion.span 
               className="text-red-400 hover:text-red-500 cursor-pointer"
@@ -100,9 +100,11 @@ export default function FinalSection() {
             >❤️</motion.span>
           </div>
           <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30 shadow-sm">
-            <p className="text-gray-600 italic text-lg">
-              &quot;Love is not about how many days, months, or years you have been together.
-              It&apos;s about how much you love each other every single day.&quot;
+            <p className="text-gray-600 italic mt-10 text-lg">
+             Bytheway i havent written this to push you into comming back with me but to show 
+             you that I still care about us , and that you still ocupy my mind , and I would 
+             encourage you to take as mucha as time as you want ot think about it . Anyways I 
+             will be waiting , whatever you decide it will be okay .
             </p>
           </div>
         </motion.div>
